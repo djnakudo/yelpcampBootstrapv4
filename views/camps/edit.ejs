@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row my-4">
+<h1 class="col-md-12 mt-5 text-center">Edit a Campground</h1>
+<div class="mx-auto">
+<form action="/campgrounds/<%= camp._id%>?_method=PUT" method="post">
+    <div class="form-group">
+      <label for="campname">Camp Name</label>
+      <input type="text" class="form-control" name="campedit[name]" id="campname"  value="<%=camp.name%>">
+    </div>
+    <div class="form-group">
+      <label for="image">Image</label>
+      <input type="text" name="campedit[image]" value="<%=camp.image%>" id="image" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" name="campedit[description]" value="<%=camp.description%>" id="description" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="campedit[price]">Price</label>
+        <input type="number" name="campedit[price]" min="0.01" step="0.01" value="<%=camp.price%>" id="price" class="form-control">
+      </div>
+    <button type="submit" class="btn btn-lg btn-block btn-primary">Submit</button>
+  </form>
+</div>
+</div>
+</div>
+  <% include ../partials/footer %>
