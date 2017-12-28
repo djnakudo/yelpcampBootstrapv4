@@ -12,6 +12,6 @@ app.use(indexRoutes);
 app.use("/campgrounds",campRoutes);
 app.use('/campgrounds/:id/comments',commentsRoutes);
 app.use(authRoutes);
-app.listen(3000,()=>{
+app.listen(process.env.PORT || 3000,()=>{
     console.log('server started at port 3000');
 });
