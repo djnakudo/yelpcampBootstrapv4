@@ -10,7 +10,7 @@ methodOverride = require('method-override');
 let app = express();
 app.use(flash());
 //removing configs from __dirname
-
+//mongodb://nakajima:bing12@ds143330.mlab.com:43330/yelpcampnaks
 app.use(express.static(`${__dirname.split('/configs')[0]}/public`));
 let db = require('../configs/db');
 app.use(methodOverride("_method"));
